@@ -1,0 +1,17 @@
+import{_ as i,c as o,a as t,d as a,o as r,r as l}from"./app-BO_7oZ-X.js";const p={};function s(d,e){const n=l("runner");return r(),o("div",null,[e[0]||(e[0]=t("h1",{id:"python-quiz",tabindex:"-1"},[t("a",{class:"header-anchor",href:"#python-quiz"},[t("span",null,"Python Quiz")])],-1)),e[1]||(e[1]=t("p",null,"这个页面记录了我在使用 Python 的过程中踩过的一些坑。20241023 玩笑话：“再多踩点坑 说不定都能出 python quiz 了（”。于是就出了。",-1)),e[2]||(e[2]=t("h2",{id:"q1",tabindex:"-1"},[t("a",{class:"header-anchor",href:"#q1"},[t("span",null,"Q1")])],-1)),e[3]||(e[3]=t("p",null,"最后会打印出什么？",-1)),a(n,{code:`
+a = []
+for i in range(3):
+    a.append(lambda: i)
+a[0]()`,ans:"lambda 捕获引用，所以打印的值都是 for 循环结束时 i 的值，也就是 2。如果要打印出捕获当时的值，需要使用 `lambda i=i: i` 进行一次值传递。"}),e[4]||(e[4]=t("h2",{id:"q2",tabindex:"-1"},[t("a",{class:"header-anchor",href:"#q2"},[t("span",null,"Q2")])],-1)),e[5]||(e[5]=t("p",null,"最后 iter a 和 iter b 会剩下什么？",-1)),a(n,{code:`a = iter([1, 2, 3, 4])
+b = iter([1, 2])
+for i, j in zip(a, b):
+    pass
+list(a), list(b)`,ans:"zip 从两个 iter 里拿完 1 和 2 后，先从 a 中取出 3。此时从 b 拿取元素时 raise StopIteration，于是程序从 for 循环中跳出，因此 a 剩下元素 4。"}),e[6]||(e[6]=t("h2",{id:"q3",tabindex:"-1"},[t("a",{class:"header-anchor",href:"#q3"},[t("span",null,"Q3")])],-1)),a(n,{code:`
+import io
+string_data = """
+hello
+world
+"""
+bytes_data = io.BytesIO(string_data.strip().encode())
+text_stream = io.TextIOWrapper(bytes_data)
+text_stream.readlines()`,ans:"`TextIOWrapper.readlines()` 会在结果中保留换行符"})])}const m=i(p,[["render",s],["__file","index.html.vue"]]),u=JSON.parse('{"path":"/zh/","title":"Python Quiz","lang":"zh-CN","frontmatter":{"date":"2024-10-24T00:00:00.000Z","description":"Python Quiz 这个页面记录了我在使用 Python 的过程中踩过的一些坑。20241023 玩笑话：“再多踩点坑 说不定都能出 python quiz 了（”。于是就出了。 Q1 最后会打印出什么？","head":[["link",{"rel":"alternate","hreflang":"en-us","href":"https://lxl66566.github.io/python-quiz/zh/python-quiz/"}],["meta",{"property":"og:url","content":"https://lxl66566.github.io/python-quiz/zh/python-quiz/zh/"}],["meta",{"property":"og:site_name","content":"Python 小测"}],["meta",{"property":"og:title","content":"Python Quiz"}],["meta",{"property":"og:description","content":"Python Quiz 这个页面记录了我在使用 Python 的过程中踩过的一些坑。20241023 玩笑话：“再多踩点坑 说不定都能出 python quiz 了（”。于是就出了。 Q1 最后会打印出什么？"}],["meta",{"property":"og:type","content":"article"}],["meta",{"property":"og:locale","content":"zh-CN"}],["meta",{"property":"og:locale:alternate","content":"en-US"}],["meta",{"property":"og:updated_time","content":"2024-10-24T12:36:06.000Z"}],["meta",{"property":"article:published_time","content":"2024-10-24T00:00:00.000Z"}],["meta",{"property":"article:modified_time","content":"2024-10-24T12:36:06.000Z"}],["script",{"type":"application/ld+json"},"{\\"@context\\":\\"https://schema.org\\",\\"@type\\":\\"Article\\",\\"headline\\":\\"Python Quiz\\",\\"image\\":[\\"\\"],\\"datePublished\\":\\"2024-10-24T00:00:00.000Z\\",\\"dateModified\\":\\"2024-10-24T12:36:06.000Z\\",\\"author\\":[{\\"@type\\":\\"Person\\",\\"name\\":\\"lxl66566\\",\\"url\\":\\"https://github.com/lxl66566\\"}]}"]]},"headers":[{"level":2,"title":"Q1","slug":"q1","link":"#q1","children":[]},{"level":2,"title":"Q2","slug":"q2","link":"#q2","children":[]},{"level":2,"title":"Q3","slug":"q3","link":"#q3","children":[]}],"git":{"createdTime":1729773366000,"updatedTime":1729773366000,"contributors":[{"name":"lxl66566","email":"lxl66566@gmail.com","commits":1}]},"readingTime":{"minutes":0.82,"words":245},"filePathRelative":"zh/README.md","localizedDate":"2024年10月24日","autoDesc":true}');export{m as comp,u as data};
