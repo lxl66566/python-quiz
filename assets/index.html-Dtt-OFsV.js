@@ -1,4 +1,4 @@
-import{_ as i,c as o,a as t,d as a,o as r,r as l}from"./app-BO_7oZ-X.js";const p={};function s(d,e){const n=l("runner");return r(),o("div",null,[e[0]||(e[0]=t("h1",{id:"python-quiz",tabindex:"-1"},[t("a",{class:"header-anchor",href:"#python-quiz"},[t("span",null,"Python Quiz")])],-1)),e[1]||(e[1]=t("p",null,"这个页面记录了我在使用 Python 的过程中踩过的一些坑。20241023 玩笑话：“再多踩点坑 说不定都能出 python quiz 了（”。于是就出了。",-1)),e[2]||(e[2]=t("h2",{id:"q1",tabindex:"-1"},[t("a",{class:"header-anchor",href:"#q1"},[t("span",null,"Q1")])],-1)),e[3]||(e[3]=t("p",null,"最后会打印出什么？",-1)),a(n,{code:`
+import{_ as i,c as o,a as t,d as a,o as r,r as l}from"./app-DEaM-8Q5.js";const p={};function s(d,e){const n=l("runner");return r(),o("div",null,[e[0]||(e[0]=t("h1",{id:"python-quiz",tabindex:"-1"},[t("a",{class:"header-anchor",href:"#python-quiz"},[t("span",null,"Python Quiz")])],-1)),e[1]||(e[1]=t("p",null,"这个页面记录了我在使用 Python 的过程中踩过的一些坑。20241023 玩笑话：“再多踩点坑 说不定都能出 python quiz 了（”。于是就出了。",-1)),e[2]||(e[2]=t("h2",{id:"q1",tabindex:"-1"},[t("a",{class:"header-anchor",href:"#q1"},[t("span",null,"Q1")])],-1)),e[3]||(e[3]=t("p",null,"最后会打印出什么？",-1)),a(n,{code:`
 a = []
 for i in range(3):
     a.append(lambda: i)
