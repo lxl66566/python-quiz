@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref, onMounted, watchEffect } from "vue";
 
 // 传入初始代码
@@ -34,13 +34,13 @@ const codearea2 = ref(null);
 const adjustHeight = () => {
   if (codearea.value) {
     codearea.value.style.height = "auto";
-    codearea.value.style.height = codearea.value.scrollHeight + "px";
+    codearea.value.style.height = `${codearea.value.scrollHeight}px`;
   }
 };
 const adjustHeight2 = () => {
   if (codearea2.value) {
     codearea2.value.style.height = "auto";
-    codearea2.value.style.height = codearea2.value.scrollHeight + "px";
+    codearea2.value.style.height = `${codearea2.value.scrollHeight}px`;
   }
 };
 watchEffect(() => {
@@ -58,10 +58,10 @@ const runCode = async () => {
   try {
     const result = pyodide.runPython(pythonCode.value.trim());
     if (result) {
-      output.value += "Result:\n" + result + "\n";
+      output.value += `Result:\n${result}\n`;
     }
   } catch (err) {
-    output.value += "Error: " + err + "\n";
+    output.value += `Error: ${err}\n`;
   }
   adjustHeight2();
 };
